@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const token ='NjExODk4MjEwMzE0NzQ3OTE0.XV2_zA.f9xBxUe2ew41DBWag0yngImo8M8';
-
 
 bot.on('ready', () =>{
     console.log(`
@@ -22,8 +20,6 @@ bot.on('message', message => {
     });
 
 
-
-    
 bot.on('message', message => {
     if(message.content === '1cred') {
         message.channel.send('#credit')
@@ -31,6 +27,4 @@ bot.on('message', message => {
     });
 
 
-
-
-bot.login(token)
+bot.login(process.env.TOKEN)
